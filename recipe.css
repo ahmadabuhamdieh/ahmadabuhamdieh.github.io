@@ -1,0 +1,67 @@
+#x
+{
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    font-size: 22pt;
+}
+
+#y
+{
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    font-size: 18pt;
+}
+
+body
+{
+    background-color: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.z{
+
+    background-color: #ffffa8;
+    margin-left: 5%;
+    font-style: italic;
+ 
+
+}
+
+.bolded
+{
+    font-weight: bold;
+}
+.strikethrough
+{
+    text-decoration: line-through;
+}
+abbr {
+    text-decoration: underline;
+  }
+
+.copyright
+  {
+    text-align: right;
+    font-family: monospace;
+
+  }
+
+  .links
+  {
+    color: #A4A400;
+  }
+.validator
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}

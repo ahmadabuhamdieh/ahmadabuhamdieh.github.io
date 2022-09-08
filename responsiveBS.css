@@ -1,0 +1,38 @@
+
+  .header
+{
+
+    background-color: #add8e6;
+    padding: 30px;
+    text-align: right;
+}
+
+
+
+.menu
+{
+
+    background-color: #2f4f4f;
+    padding: 15px;
+  
+}
+.footer
+{
+
+    background-color: #2f4f4f;
+    padding: 30px;
+   text-align: center;
+   color:white;
+}
+
+a {
+    padding: 14px 16px;
+    border-right: 1px solid black;
+    color: white;
+}
+.col-md-4 {
+   
+    padding: 10px;
+    height: 300px; 
+   
+  }

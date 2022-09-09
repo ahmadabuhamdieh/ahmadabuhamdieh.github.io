@@ -65,16 +65,27 @@ function reverse(a)
 
 function findLongestWord(a)
 {
+
+    
     let max=0;
-    for (let i=0;i<a.length;i++)
+    a.map(function(x)
+    {
+        if (x.length)
+        max=x.length;
+    });
+
+
+   // let max=0;
+   /* for (let i=0;i<a.length;i++)
     {
         if (max<=a[i].length)
          max=a[i].length;
           else
           return max;
 
-    }
+    }*/
     return max;
+   
 
 }
 
@@ -82,24 +93,25 @@ function filterLongWords(arr, i){
     var q = [], 
         k = 0;
 
-    arr.map(function(p, c){
-        if(p.split('').length > i) q[k++] = p;
+    arr.map(function(p){
+        if(p.split('').length > i)
+         q[k++] = p;
     });
 
     return q;
 }
 
 const a = [1,3,5,3,3]; 
-const b = a.map(function(elem, i, array) {
+const b = a.map(function(elem) {
   return elem + 10;
 })
 document.writeln(b.toString() + "<br/>");
 
-const c = a.filter(function(elem, i, array){
+const c = a.filter(function(elem){
   return elem == 3;});
 document.writeln(c.toString() + "<br/>");
 
-const d = a.reduce(function(prevValue, elem, i, array){
+const d = a.reduce(function(prevValue, elem){
   return prevValue * elem;
 });
 document.writeln(d+ "<br/>");

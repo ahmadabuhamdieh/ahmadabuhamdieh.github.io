@@ -34,7 +34,7 @@ function startf() {
   document.getElementById("start").disabled = true;
   document.getElementById("animation").disabled = true;
   let scenerio = document.getElementById("animation");
-  let args = ANIMATIONS[animationlst.value].split("=====");
+   args = ANIMATIONS[animationlst.value].split("=====");
   let argsLength = args.length;
   i = 0;
   let start = Date.now();

@@ -2,7 +2,7 @@
 let timer = 0;
 let animationlst;
 let args;
-let speed = 250;
+let speed = 2500;
 let i;
 
 window.onload = function () {
@@ -18,8 +18,7 @@ window.onload = function () {
   let stopbtn = document.getElementById("stop");
   stopbtn.onclick = stopf;
 
-
-  let turbochk= document.getElementById("turbo");
+  let turbochk = document.getElementById("turbo");
   turbochk.onchange = turbof;
 };
 
@@ -34,35 +33,37 @@ function startf() {
   document.getElementById("start").disabled = true;
   document.getElementById("animation").disabled = true;
   let scenerio = document.getElementById("animation");
-   args = ANIMATIONS[animationlst.value].split("=====");
+  args = ANIMATIONS[animationlst.value].split("=====");
   let argsLength = args.length;
   i = 0;
+  //let start = Date.now();
+  timer = setInterval(function () {
+   // let timePassed = Date.now() - start;
+    
+    if (i === argsLength) i = 0;
+    document.getElementById("text-area").value = args[i];
+  
+  //  draw(0, args[i]);
+    i++;
+  }, speed);
+
+}
+
+function draw(time, draft) {
+  document.getElementById("text-area").value = draft;
+}
+
+function turbof() {
+  clearInterval(timer);
+  speed = document.getElementById("turbo").checked == true ? 50 : 2500;
   let start = Date.now();
   timer = setInterval(function () {
     let timePassed = Date.now() - start;
-    console.log(timePassed);
+    let argsLength = args.length;
     if (i === argsLength) i = 0;
     draw(timePassed, args[i]);
     i++;
   }, speed);
-  console.log(argsLength);
-  console.log(start);
-}
-
-function draw(time, draft) {
-    document.getElementById("text-area").value = draft;
-}
-
-function turbof () {
-    clearInterval(timer);
-    speed = document.getElementById("turbo").checked == true ?  50 : 2500;
-    let start = Date.now(); 
-    timer = setInterval(function() {
-        let timePassed = Date.now() - start;
-        let argsLength = args.length;
-        if (i === argsLength ) i = 0;
-        draw(timePassed, args[i]); i++;
-      }, speed );
 }
 
 function fontSizef() {

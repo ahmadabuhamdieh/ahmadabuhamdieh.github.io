@@ -1,43 +1,18 @@
 
-let i;
-var j;
 
-console.log(i);
-console.log(j);
 
-let  temp= 'studentId';
+let emailMatch1 = new RegExp("^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,}$");
+let emailMatch2 = /^[a-zA-Z_-]+@(([a-zA-Z_-])+\.)+[a-zA-Z]{2,}$/;
 
-const obj ={
 
-    firstname :'john',
-    lastname : 'smith',
-    'my age':20,
-    [temp]: 'test'
-}
+console.log("mzijlstra@miu.edu".match(emailMatch1)); // boolean value
+console.log(emailMatch1.test("mzijlstra@miu.edu"));// same boolean value
 
 
 
-
-console.log(obj.firstname);
-console.log(obj.lastname);
-console.log(obj["my age"]);
-
-console.log(obj['firstname']);
-
-
-console.log(obj.temp);
-console.log(obj.studentId);
+let emailMatch3 = new RegExp("^e+$");
 
 
 
-const ducks = ["Huey", "Dewey", "Louie"];
-ducks[0]='ahmad';
-ducks.concat('test');
+console.log(emailMatch3.test("the")); // boolean value
 
-
-ducks.push("sally");
-ducks.pop("sally");
-ducks.unshift("LOAI");
-ducks.shift("LOAI");
-console.log( ducks);
-console.log(ducks[0]);

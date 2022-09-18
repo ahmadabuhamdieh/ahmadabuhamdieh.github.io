@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <fieldset class="my-grid" style="width: 250px;">
+        <legend> Party Info:</legend>
+        <label id="id1">First name: </label> 
+        <input  id="id2" type="text" size="8"/>
+        <br>
+        <label  id="id3">Last name:</label> 
+        <input  id="id4" type="text" size="8"/>
+        <br>
+        <label  id="id5"> Favorite Food:</label>
+        <select  id="id6">
+            <option selected> Pizza </option>
+            <option> Ice Cream </option>
+            <option> Burger </option>
+        </select>
+    </fieldset>
+    </form>
+
+    <style>
+        .my-grid{
+            display: grid;
+            grid-template-areas: 
+                            'c1 c2'
+                            'c3 c4'
+                            'c5 c6';
+            gap: 10px;
+        }
+
+
+#id1 {
+    grid-area: c1;
+}
+
+#id2 {
+    grid-area: c2;
+}
+
+#id3 {
+    grid-area: c3;
+}
+
+#id4 {
+    grid-area: c4;
+}
+
+#id5 {
+    grid-area: c5;
+}
+
+#id6 {
+    grid-area: c6;
+}
+       
+    </style>
+
+
+</body>
+</html>

@@ -58,12 +58,42 @@ var c = function (a, b, c) {
 };
 
 c(8, 9, 10);
-console.log("b"+b);
+console.log("b" + b);
 
+class Article {
+  constructor(title, date) {
+    this.title = title;
+    this.date = date;
+  }
+  static compare(articleA, articleB) {
+    return articleA.date - articleB.date;
+  }
+}
+// usage
+let articles = [
+  new Article("HTML", new Date(2019, 1, 1)),
+  new Article("CSS", new Date(2019, 0, 1)),
+  new Article("JavaScript", new Date(2019, 11, 1)),
+];
+articles.sort(Article.compare);
+alert(articles[1].title); // CSS
 
-
-
-
-
-
+/*
+class User {
+  constructor(name = "Anonymous") {
+    this.name = name;
+  }
+  sayHi() {
+    console.log(`Hello, ${this.name}!`);
+  }
+}
+let fred = new User();
+console.log(fred);
+console.log(fred.__proto__);
+console.log(User.prototype);
+fred.sayHi();
+let bob = new User("Bob");
+console.log(bob);
+bob.sayHi();
+*/
 

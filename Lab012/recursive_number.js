@@ -1,3 +1,4 @@
+console.log(this);
 const readline = require("readline").createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -13,3 +14,4 @@ var getNumber = function () {
   };
   
   getNumber(); //we have to actually start our recursion somehow
+

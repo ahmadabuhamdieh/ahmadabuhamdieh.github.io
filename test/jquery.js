@@ -8,13 +8,13 @@ function strf() {
 }
 */
 
+//$(document).ready(function () {
+  //alert("Hello World");
+//});
 
+$(function() { alert("Hello World") });
 
-setTimeout(() => { console.log('timeout'); }, 0);
- setImmediate(() => { console.log('immediate'); });
- process.nextTick(()=> console.log('nexttick'));
-
-    /*$(document).ready(function () {
+/*$(document).ready(function () {
   const elems = $("#square,#textbox");
   console.log(elems);
   $("#square").click(strf);
@@ -88,5 +88,3 @@ delayBySeconds(5);
 // Executes after delay of 5 seconds
 console.log("After delay");
 */
-
-requier

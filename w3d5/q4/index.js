@@ -3,8 +3,10 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
-app.set("view engine", "ejs");
+//const urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded());
+//app.set('views',path.join(__dirname, "ahmad"));
 /*
 if (hour >=6 && hour <=18)
 {
@@ -45,7 +47,7 @@ app.get("/", (req, res) => {
   res.render("index", { variable: "Express", style: `${st}.css` });
 });
 
-app.post("/result", urlencodedParser, (req, res) => {
+app.post("/result", (req, res) => {
   console.log(req.body);
   let name = req.body.name;
   let age = req.body.age;
@@ -79,3 +81,5 @@ app.get("/output", (req, res) => {
 });
 
 app.listen(3000);
+
+
